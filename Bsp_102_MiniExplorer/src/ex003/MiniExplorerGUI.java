@@ -11,12 +11,14 @@ package ex003;
  */
 public class MiniExplorerGUI extends javax.swing.JFrame {
 
+    private String pathname = System.getProperty("user.dir");
     private DateiModell dm = new DateiModell();
     
     
     public MiniExplorerGUI() {
         initComponents();
         liDateien.setModel(dm);
+        this.setTitle(pathname);
     }
 
     /**

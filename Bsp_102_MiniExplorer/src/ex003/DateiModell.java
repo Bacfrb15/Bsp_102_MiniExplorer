@@ -1,5 +1,6 @@
 package ex003;
 
+import java.util.ArrayList;
 import javax.swing.AbstractListModel;
 
 /**
@@ -8,15 +9,16 @@ import javax.swing.AbstractListModel;
  */
 public class DateiModell extends AbstractListModel
 {
-
+    private ArrayList<Datei> dateien = new ArrayList();
+    
     @Override
     public int getSize() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return dateien.size();
     }
 
     @Override
     public Datei getElementAt(int index) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return dateien.get(index);
     }
     
 }
