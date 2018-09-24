@@ -11,11 +11,12 @@ package ex003;
  */
 public class MiniExplorerGUI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MiniExplorerGUI
-     */
+    private DateiModell dm = new DateiModell();
+    
+    
     public MiniExplorerGUI() {
         initComponents();
+        liDateien.setModel(dm);
     }
 
     /**
@@ -27,18 +28,15 @@ public class MiniExplorerGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jScrollPane1 = new javax.swing.JScrollPane();
+        liDateien = new javax.swing.JList<>();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.GridLayout());
+
+        jScrollPane1.setViewportView(liDateien);
+
+        getContentPane().add(jScrollPane1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +77,7 @@ public class MiniExplorerGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JList<Datei> liDateien;
     // End of variables declaration//GEN-END:variables
 }
