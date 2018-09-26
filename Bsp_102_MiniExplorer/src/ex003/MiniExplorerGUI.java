@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package ex003;
-
 import java.io.File;
-
 /**
  *
  * @author franz

@@ -6,7 +6,6 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.ListCellRenderer;
-
 /**
  *
  * @author franz

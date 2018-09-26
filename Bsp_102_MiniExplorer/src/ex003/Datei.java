@@ -2,7 +2,6 @@ package ex003;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
-
 /**
  *
  * @author franz

@@ -2,7 +2,6 @@ package ex003;
 
 import java.util.ArrayList;
 import javax.swing.AbstractListModel;
-
 /**
  *
  * @author franz
