@@ -22,7 +22,7 @@ public class MiniExplorerGUI extends javax.swing.JFrame {
         liDateien.setCellRenderer(fl);
         this.setTitle(pathname);
         this.setSize(600, 600);
-        dm.changeDir(new File(System.getProperty("user.dir")));
+        
     }
 
     /**
