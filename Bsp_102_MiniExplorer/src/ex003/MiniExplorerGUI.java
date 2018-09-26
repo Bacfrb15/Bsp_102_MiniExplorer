@@ -5,20 +5,26 @@
  */
 package ex003;
 
+import java.io.File;
+
 /**
  *
  * @author franz
  */
 public class MiniExplorerGUI extends javax.swing.JFrame {
 
-    private String pathname = System.getProperty("user.dir");
-    private DateiModell dm = new DateiModell();
+    private final String pathname = System.getProperty("user.dir");
+    private final DateiModell dm = new DateiModell();
+    private final FileListRenderer fl = new FileListRenderer();
     
     
     public MiniExplorerGUI() {
         initComponents();
         liDateien.setModel(dm);
+        liDateien.setCellRenderer(fl);
         this.setTitle(pathname);
+        this.setSize(600, 600);
+        dm.changeDir(new File(System.getProperty("user.dir")));
     }
 
     /**
@@ -49,7 +55,10 @@ public class MiniExplorerGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void onChangeDir(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onChangeDir
-        
+        if(evt.getClickCount() == 2)
+        {
+            dm.changeDir(liDateien.getSelectedValue());
+        }
     }//GEN-LAST:event_onChangeDir
 
     /**

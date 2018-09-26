@@ -14,7 +14,7 @@ import javax.swing.ListCellRenderer;
 public class FileListRenderer implements ListCellRenderer<Datei>
 {
   @Override
-  public Component getListCellRendererComponent(JList<? extends Datei> list, Datei value, int index, boolean isSelected, boolean cellHasFocus)
+  public Component getListCellRendererComponent(JList<? extends Datei> list, Datei value, int index, boolean isSelected, boolean hasFocus)
   {
     JLabel lb = new JLabel(value.toString());
     lb.setOpaque(true);
@@ -23,12 +23,12 @@ public class FileListRenderer implements ListCellRenderer<Datei>
     {
       lb.setBackground(Color.GRAY.brighter());
       lb.setForeground(Color.red);
-      lb.setFont(new Font("Courire New", Font.BOLD + Font.ITALIC, 12));
+      lb.setFont(new Font("Courier New", Font.BOLD + Font.ITALIC, 12));
     }
     else
     {
       lb.setForeground(Color.blue);
-      lb.setFont(new Font("Courire New", Font.PLAIN, 12));
+      lb.setFont(new Font("Courier New", Font.PLAIN, 12));
     }
     
     if(isSelected)

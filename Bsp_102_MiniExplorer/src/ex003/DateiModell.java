@@ -20,5 +20,9 @@ public class DateiModell extends AbstractListModel
     public Datei getElementAt(int index) {
         return dateien.get(index);
     }
+
+    public void changeDir(Datei selectedValue) {
+        
+    }
     
 }
