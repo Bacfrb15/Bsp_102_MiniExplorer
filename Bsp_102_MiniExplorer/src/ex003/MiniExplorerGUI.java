@@ -21,8 +21,8 @@ public class MiniExplorerGUI extends javax.swing.JFrame {
         liDateien.setModel(dm);
         liDateien.setCellRenderer(fl);
         this.setTitle(pathname);
-        this.setSize(600, 600);
-        
+        this.setSize(400, 300);
+        dm.changeDir(new File(System.getProperty("user.dir")));
     }
 
     /**
