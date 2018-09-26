@@ -34,14 +34,23 @@ public class MiniExplorerGUI extends javax.swing.JFrame {
         liDateien = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridLayout());
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
+        liDateien.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                onChangeDir(evt);
+            }
+        });
         jScrollPane1.setViewportView(liDateien);
 
         getContentPane().add(jScrollPane1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void onChangeDir(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onChangeDir
+        
+    }//GEN-LAST:event_onChangeDir
 
     /**
      * @param args the command line arguments
